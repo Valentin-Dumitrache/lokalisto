@@ -7,27 +7,26 @@
             color="info"
     />
     <div v-else class="contentContainer mx-auto" >
-<!--        <router-link v-for="campaign in campaigns" :key="campaign.id" :to="{name: 'campaign', params: { id: campaign.id }}" tag="div" class="pointer" >-->
-<!--            <v-img :src="campaign.mainPicture" class="img">-->
-<!--                <v-chip-->
-<!--                        label-->
-<!--                        class="mx-auto elevation-4 d-table mt-12 whiteOverlay pointer"-->
-<!--                        color="rgb(255, 255, 255, 0.7)"-->
-<!--                ><h2 class="pointer">{{campaign.name}}</h2></v-chip>-->
-<!--            </v-img>-->
-<!--        </router-link>-->
-        <h2 class="d-table mx-auto mb-12">Ingen tidligere kampagner</h2>
-<!--        <app-footer/>-->
+        <router-link v-for="campaign in campaigns" :key="campaign.id" :to="{name: 'campaign', params: { id: campaign.id }}" tag="div" class="pointer" >
+            <v-img :src="campaign.mainPicture" class="img">
+                <v-chip
+                        label
+                        class="mx-auto elevation-4 d-table mt-12 whiteOverlay pointer"
+                        color="rgb(255, 255, 255, 0.7)"
+                ><h2 class="pointer">{{campaign.name}}</h2></v-chip>
+            </v-img>
+        </router-link>
+        <app-footer/>
     </div>
 
 </template>
 
 <script>
     import { mapActions, mapGetters } from 'vuex';
-    // import AppFooter from "../components/app-footer";
+    import AppFooter from "../components/app-footer";
 
     export default {
-        // components: {AppFooter},
+        components: {AppFooter},
         computed: {
             ...mapGetters(['campaigns', 'loading'])
         },

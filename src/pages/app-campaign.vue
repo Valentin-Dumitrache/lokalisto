@@ -38,7 +38,7 @@
                         <p class="mx-auto d-table font-weight-bold" v-if="this.$store.getters.couponsAvailable">{{this.$store.getters.couponsAvailable}} TILBAGE</p>
                         <v-btn :disabled="loading" outlined rounded color="#DBB658" class="mx-auto d-table mb-3" v-on:click="initializeBuying"><p class="ma-auto">Køb Nu</p></v-btn>
                     </div>
-                    <p v-else class="d-table ma-auto mb-md-3 font-weight-bold">Udsolgt</p>
+                    <p v-else class="d-table ma-auto mb-md-3 font-weight-bold mb-3">Udsolgt</p>
                 </div>
             </div>
             <div class="infoBox restaurant text-center align-self-start">
@@ -46,7 +46,7 @@
                     <p class="font-weight-bold">{{$store.getters.campaignName}}</p>
                     <p v-html="this.$store.getters.content.split('</p>')[1]"/>
                     <v-container class="d-inline-flex justify-space-between mt-n4 px-md-12">
-                        <a v-for="website in getWebsites" :key="website.name" :href="website.source">
+                        <a v-for="website in getWebsites" :key="website.name" :href="website.href">
                             <v-icon color="black" class="pointer icon" >
                                 {{`mdi-${website.name}`}}
                             </v-icon>
@@ -54,7 +54,7 @@
                     </v-container>
                 </v-container>
             </div>
-            <div class="infoBox writer mt-2">
+            <div class="infoBox writer mt-3">
                 <v-avatar size="50px" class="mx-auto d-table mt-2">
                     <img
                             :src="$store.getters.writerPicture"
@@ -326,7 +326,7 @@
                     "body .";
             grid-template-columns: auto 300px;
             grid-row-gap: 35px;
-            width: 60vw;
+            width: 70vw;
         }
         display: grid;
         grid-template-columns: 45vw 45vw;
@@ -568,6 +568,9 @@
     }
 
     .resp-sharing-button--telegram:hover {
-        background-color: #4B97D1;}
-
+        background-color: #4B97D1;
+    }
+    a {
+        text-decoration: none;
+    }
 </style>

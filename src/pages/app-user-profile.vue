@@ -15,10 +15,10 @@
             <div class="line"/>
         </div>
         <div class="tableContainer mx-auto" v-for="coupon in coupons" v-bind:key="coupon.id">
-            <router-link tag="div" class="d-table text-center pointer text-decoration-underline" :to="{path: `campaign/${coupon.id}`}"><h2 class="name mx-auto">{{coupon.name}}</h2></router-link>
-            <h2 class="code mx-auto">{{coupon.code}}</h2>
-            <h2 class="status mx-auto">{{coupon.status}}</h2>
-            <h2 class="date mx-auto">{{coupon.date}}</h2>
+            <router-link tag="div" class="d-table text-center pointer text-decoration-underline" :to="{path: `campaign/${coupon.id}`}"><h3 class="name mx-auto">{{coupon.name}}</h3></router-link>
+            <h3 class="code mx-auto">{{coupon.code}}</h3>
+            <h3 class="status mx-auto">{{coupon.status}}</h3>
+            <h3 class="date mx-auto">{{coupon.date}}</h3>
         </div>
         <h2 v-if="isEmpty" class="mx-auto mt-3 d-table">Ingen værdibeviser købt.</h2>
     </div>

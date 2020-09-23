@@ -84,7 +84,7 @@
 <style lang="scss" scoped>
     .contentContainer {
         width: 90vw;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             width: 70vw;
             padding: 0 !important;
         }
@@ -99,7 +99,7 @@
         float: right;
         background-color: #DBB658;
         height: 40vh;
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1025px) {
             display: none;
         }
         border-radius: 0 16px 0 0 !important;
@@ -111,14 +111,14 @@
     .img {
         height: 40vh;
         width: calc(100% + 3px);
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             border-radius: 16px 0 0 0 !important;;
         }
         border-radius: 16px 16px 0 0 !important;
 
     }
     .routerLink {
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             width: 50%;
             display: inline-block;
             float: left;
@@ -127,7 +127,7 @@
         border-radius: 16px 16px 0 0 !important;
     }
     .video {
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             width: 50% !important;
             margin-bottom: 0;
             border-radius: 0 0 0 16px !important;
@@ -145,7 +145,7 @@
         width: 100%;
         height: calc(40vh + 3px);
         border: 1px solid #cfcdcf;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             width: 50%;
             margin-top: 0;
             position: absolute;
@@ -162,7 +162,7 @@
     }
     .input {
         width: 130px;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1025px) {
             width: 200px;
         }
     }

@@ -162,7 +162,7 @@ export default new Vuex.Store({
       try {
         const { data } = await axios.get(`${hostPath}/${id}`);
         const coupons = await axios.get(
-          `https://coupons-8778.restdb.io/rest/coupons?q={"campaign": "${data.id}"}`,
+          `https://coupons-8778.restdb.io/rest/coupons?q={"campaign": "${data.id}", "status" : {"$not" : "Inactive"}}`,
           {
             headers: {
               'Content-Type': 'application/json',

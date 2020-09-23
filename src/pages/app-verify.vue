@@ -53,13 +53,13 @@
               }
             }
           );
-            if (data[0].status === "Unused") {
+            if (data[0].status === "Ubrugt") {
               if(dates.compare(data[0].endDate, this.today ) === 1) {
                 this.changeConclusion("Værdibeviset er gyldig! Og er blevet indløst");
                 axios.put(
                   'https://coupons-8778.restdb.io/rest/coupons/' + data[0]._id,
                     {
-                      "status":"Used"
+                      "status":"Indløst"
                     },
                   {
                     headers: {
